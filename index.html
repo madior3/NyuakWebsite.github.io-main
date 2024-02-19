@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <!-- Include Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <title>Nyuak Community Development</title>
@@ -30,6 +29,18 @@
 
   <!-- Template Main CSS File -->
   <link href="css/style.css" rel="stylesheet">
+
+
+  <!--Emailjs Link-->
+  <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+></script>
+<script type="text/javascript">
+  (function () {
+    emailjs.init("KvnVvdh4ob5eYWznc");
+  })();
+</script>
 </head>
 
 <body>
@@ -57,7 +68,7 @@
               <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li> 
           
             </ul></li>
-            <li><a class="nav-link scrollto" href="./leadership.html">Our Inpact</a></li>
+            <li><a class="nav-link scrollto" href="./impact.html">Our Impact</a></li>
           <li><a class="nav-link scrollto" href="./Watch.html">Watch Lives</a></li>
           <li><a class="nav-link scrollto" href=".#">Events</a>
             <ul>
@@ -100,9 +111,10 @@
     <div class="py-vh-5 w-100 overflow-hidden" id="services">
       <div class="container">
         <div class="row d-flex justify-content-center">
-          <div class="section-title">
-            <p class="text-Capitalize">Nyuak community development is a community organization providing charitable relief services to the underprivileged populations overseas, particularly in south sudan displacement camps (IDP)..</p>
+          <div class=>
+            <p >Nyuak community development-USA is a non-profit organization dedicated to providing leadership and unity for the Nyuak community worldwide. Through various community development initiatives, the organization works to empower individuals, promote cultural awareness, and foster collaboration among community members. Nyuak Community Development-USA strives to create a strong and vibrant community that is united in its efforts to support and uplift its members.</p>
           </div>
+          
         </div>
         <br><br>
         <div class="row d-flex align-items-center">
@@ -194,18 +206,25 @@
  <!-- end revolution slider -->
 
 
-    <!-- Story Section -->
-    <section id="home1" class="d-flex align-items-center">
-      <div class="container">
-        <h1>Reuniting for community development, because together we can achieve so much more</h1>
-        <div class="play-btn">
-          <ion-icon name="play-circle-sharp"></ion-icon>
-  
-        </div>
+ <!--==========CALL TO DONATE START===========-->
+ <section id="Our-impact" class="d-flex align-items-center">
+  <div class="container">
+    <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+      <h2 class="display-3 font-weight-bold text-white text-center">GIVE THEM SPARKS AND PUT SMILES ON THEIR FACES</h2> <br>
+      <p class="text-white text-center"> Your donation, no matter how small, can make a significant difference in the lives of those struggling to feed their families. By supporting NNAP, you're not just providing a meal – you're offering hope, comfort, and a chance for a better future. Together, let's make a meaningful impact and show our solidarity with the most vulnerable members of our community.</p>
+      <div class="d-inline-flex text-white">
+          <div class="m-0">
+              <a href="./donate.html" class="donate-btn scrollto"><span class="d-none d-md-inline"></span>DONATE NOW</a>
+          
+          </div>
       </div>
-    </section>
-    
-   <!-- End Story Section -->
+  </div>
+  </div>
+</section>
+
+<!-- End Call to donate Section -->
+
+<!--===========CALL TO DONATE END===========-->
 
     <!-- ======= Home Section ======= -->
     
@@ -252,38 +271,59 @@
             </div>
 
           </div>
-
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          <!-- End Contact Form -->
+         
+          <div class="col-lg-8" >
+            <div class="row ">
+              <div class="php-email-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="Enter name"
+                    />
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Enter email"
+                    />
+                  </div>
                 </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                
+                <div class="form-group mt-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subject"
+                    placeholder="Subject"
+                  />
                 </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="7" placeholder="Message" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div><!-- End Contact Form -->
+                <div class="form-group mt-3">
+                  <textarea class="form-control" id="message" rows="3"></textarea>
+                </div>
+                <div class="text-center">
 
+                  <button class="donate-btn scrollto" onclick="sendMail()">Send Message</button>
+                
+                </div>
+
+              </div>
+            </div>
+          </div>
+         
+          
+        </div>
         </div>
 
       </div>
     </section>
-
-    
+ 
+       
  <!-- ======= Footer ======= -->
  
  <div id="footer" class="text-center">
@@ -310,9 +350,9 @@
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-
   </main><!-- End #main -->
+
+  
 
   <!-- Vendor JS Files -->
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -345,5 +385,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
 </html>
