@@ -28,7 +28,7 @@ a {
 }
 
 a:hover {
-  color: #3291e6;
+  color: #f4b328;
   text-decoration: none;
   transition: all 0.5s ease-in-out 0s;
 }
@@ -39,10 +39,14 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6 
+ul
+li{
   font-family: "Poppins", sans-serif;
 }
-
+.work-list{
+  font-family:  "Poppins", sans-serif;
+}
 .section-title {
   font-family: "Poppins", sans-serif;
 }
@@ -77,7 +81,7 @@ h6 {
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
-  padding: 10px 0;
+  padding: 5px 0;
   box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
 }
 
@@ -95,9 +99,93 @@ h6 {
   width: 90px;
   height: auto;
 }
-
 /**
-* donate Button *
+info-button
+*/
+.info-button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.info-button {
+  --primary-color: #4f6129;
+  --hovered-color:#f4b328 ;
+  position: relative;
+  display: flex;
+  font-weight: 200;
+  font-size: 16px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.info-button a {
+  margin: 0;
+  position: relative;
+  font-size: 18px;
+  color: #4f6129;
+  text-decoration: none;
+}
+
+.info-button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -3px;
+  transition: 0.3s ease-out;
+  border-bottom: 1px solid #4f6129;
+  
+}
+
+.info-button a::before {
+  position: absolute;
+  /*   box-sizing: border-box; */
+  content: "";
+  width: 0%;
+  inset: 0;
+  overflow: hidden;
+  transition: 0.3s ease-out;
+  
+
+}
+.info-button .reead-if{
+  text-decoration: none;
+  color: #4f6129;
+  font-family: "Poppins", sans-serif;
+}
+
+.info-button:hover::after {
+  width: 100%;
+  text-decoration: none;
+}
+
+.info-button:hover a::before {
+  width: 100%;
+  text-decoration: none;
+}
+
+.info-button:hover svg {
+  transform: translateX(4px);
+  color: #4f6129;
+}
+
+.info-button svg {
+  
+  transition: 0.2s;
+  font-size: 16px;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+  color: #f4b328;
+}
+
+
+/*donate Button *
 */
 .donate-btn {
   text-transform: capitalize;
@@ -205,7 +293,7 @@ h6 {
   justify-content: center; /* Center align horizontally */
   font-size: 26px;
   color: #4f6129;
-  font-weight: 900;
+  font-weight: 600;
   white-space: nowrap;
   transition: 0.3s;
   border-bottom: 1px solid transparent;
@@ -324,8 +412,8 @@ section {
 }
 
 .section-title h2 {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
   padding: 0;
   line-height: 1px;
   margin: 0 0 5px 0;
@@ -699,16 +787,16 @@ section {
 }
 
 .slider_cont_section h3 {
-  font-size: 32px;
+  font-size: 21px;
   color: #f4b328;
-  font-weight: 600;
+  font-weight: 400;
   margin: -25px 0 25px 0;
   padding: 0;
   line-height: normal;
 }
 
 .slider_cont_section p {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 32px;
   padding-right: 15px;
@@ -869,7 +957,7 @@ Stories section
   cursor: pointer;
 }
 
-.contact .info-item:last-child {
+.contact .info-item:last-reunion {
   margin-bottom: 0;
 }
 
@@ -1078,8 +1166,8 @@ Stories section
 #home-who {
   margin-top: 55px;
   width: 100%;
-  height: 65vh;
-  background: url("../img/nyuak-M.png");
+  height: 75vh;
+  background: url("../img/about-us.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; /* Add this to establish a positioning context */
@@ -1277,7 +1365,7 @@ Stories section
   color: #f4b328;
 }
 
-.features .content p:last-child {
+.features .content p:last-reunion {
   margin-bottom: 0;
 }
 
@@ -1636,16 +1724,277 @@ Stories section
   }
 }
 
+
 /*===============END OF CORE COMMITMENTS PAGE===============*/
 
+
+
+/*=============START OF MEDIA========================*/
+
+#home-media {
+  margin-top: 55px;
+  width: 100%;
+  height: 95vh;
+  background: url("../img/BG-MEDIA.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; /* Add this to establish a positioning context */
+
+  /* Center content vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home-media::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Adjust the opacity here (0.5 for 50% opacity) */
+}
+
+#home-media .container {
+  position: relative;
+}
+
+#home-media h1 {
+  margin: 20px;
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 60px;
+  text-transform: capitalize;
+  color: #fff;
+  text-align: center;
+}
+
+#home-media h2 {
+  padding-top: 5px;
+  color: #f4b328;
+  margin: 10px 0 0 0;
+  font-size: 24px;
+  text-align: center;
+}
+#home-media h2 span {
+  color: #fff;
+}
+
+/*============START OF CALENDER======================*/
+#home-calender {
+  margin-top: 55px;
+  width: 100%;
+  height: 95vh;
+  background: url("../img/Calender-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; /* Add this to establish a positioning context */
+
+  /* Center content vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home-calender::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Adjust the opacity here (0.5 for 50% opacity) */
+}
+
+#home-calender .container {
+  position: relative;
+}
+
+#home-calender h1 {
+  margin: 20px;
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 60px;
+  text-transform: capitalize;
+  color: #fff;
+  text-align: center;
+}
+
+#home-calender h2 {
+  padding-top: 5px;
+  color: #f4b328;
+  margin: 10px 0 0 0;
+  font-size: 24px;
+  text-align: center;
+}
+#home-calender h2 span {
+  color: #fff;
+}
+
+
+/*============START OF GALLERY======================*/
+#home-gallery {
+  margin-top: 55px;
+  width: 100%;
+  height: 95vh;
+  background: url("../img/reunion/Galander-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; /* Add this to establish a positioning context */
+
+  /* Center content vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home-galLery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); /* Adjust the opacity here (0.5 for 50% opacity) */
+}
+
+#home-gallery .container {
+  position: relative;
+}
+
+#home-gallery h1 {
+  margin: 20px;
+  font-size: 46px;
+  font-weight: 900;
+  line-height: 60px;
+  text-transform: capitalize;
+  color: #fff;
+  text-align: center;
+}
+
+#home-gallery h2 {
+  padding-top: 5px;
+  color: #f4b328;
+  margin: 10px 0 0 0;
+  font-size: 24px;
+  text-align: center;
+}
+#home-gallery h2 span {
+  color: #fff;
+}
+
+/*---------Photos Gallery---------*/
+input{
+  display: none;
+}
+.container-gallery{
+  width: 100%;
+  text-align: center;
+  padding: 60px 0 100px 0;
+}
+
+label{
+  display: inline-block;
+  border: 1px solid;
+  height: 100%;
+  margin: 0 20px;
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #4f6129;
+  font-size: 18px;
+  font-weight: 700;
+  transition:color .5s;
+  padding: 0 20px;
+  border-radius: 50px;
+  font-family: Playfair Display;
+  transition: ease .5s;
+
+}
+label:hover{
+  background-color: #f4b328;
+  
+}
+
+.photo-gallery{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+.pic1{
+  position: relative;
+  height: 330px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.06);
+}
+.pic1 img{
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+}
+
+#check1:checked ~ .container-gallery .photo-gallery .pic1{
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+  transition: .5s;
+}
+#check2:checked ~ .container-gallery .photo-gallery .fundraiser{
+  transform: scale(1);
+  opacity: 1;
+  position: relative;
+  transition: .5s;
+}
+#check2:checked ~ .container-gallery .photo-gallery .reunion,
+#check2:checked ~ .container-gallery .photo-gallery .all-photos{
+  transform: scale(0);
+  opacity: 0;
+  position:absolute;
+  transition: .5s;
+}
+
+#check3:checked ~ .container-gallery .photo-gallery .reunion{
+  transform: scale(1);
+  opacity: 1;
+  position: relative;
+  transition: .5s;
+}
+#check3:checked ~ .container-gallery .photo-gallery .fundraiser,
+#check3:checked ~ .container-gallery .photo-gallery .all-photos{
+  transform: scale(0);
+  opacity: 0;
+  position:absolute;
+  transition: 0s;
+}
 /*===============START OF WATCH PAGE===============*/
 /************hero-news Section******************/
 
 #hero-watch-live {
   margin-top: 55px;
   width: 100%;
-  height: 65vh;
-  background: url("../img/nyuak-M.png");
+  height: 85vh;
+  background: url("../img/watch\ live-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; /* Add this to establish a positioning context */
@@ -1840,8 +2189,8 @@ li.video {
 #events-news {
   margin-top: 55px;
   width: 100%;
-  height: 65vh;
-  background: url("../img/nyuak-M.png");
+  height: 85vh;
+  background-color: #888;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; /* Add this to establish a positioning context */
@@ -2642,6 +2991,10 @@ img {
   }
 }
 
+
+/*--gallery*/
+
+
 /*==================END OF Gallery=====================*/
 
 /* Donation Section */
@@ -2973,8 +3326,8 @@ img {
 }
 
 .about .section-title2 h2 {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
   padding: 0;
   line-height: 1px;
   margin: 0 0 5px 0;
@@ -2996,11 +3349,12 @@ img {
 .about .section-title2 p {
   margin: 0;
   margin: 0;
-  font-size: 36px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #4f6129;
+  padding: 10px 0 20px 0;
 }
 .about .section-title2 h3 {
   margin: 0;
