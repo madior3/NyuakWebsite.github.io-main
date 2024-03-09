@@ -39,13 +39,11 @@ h2,
 h3,
 h4,
 h5,
-h6 
-ul
-li{
+h6 ul li {
   font-family: "Poppins", sans-serif;
 }
-.work-list{
-  font-family:  "Poppins", sans-serif;
+.work-list {
+  font-family: "Poppins", sans-serif;
 }
 .section-title {
   font-family: "Poppins", sans-serif;
@@ -114,7 +112,7 @@ info-button
 
 .info-button {
   --primary-color: #4f6129;
-  --hovered-color:#f4b328 ;
+  --hovered-color: #f4b328;
   position: relative;
   display: flex;
   font-weight: 200;
@@ -139,7 +137,6 @@ info-button
   bottom: -3px;
   transition: 0.3s ease-out;
   border-bottom: 1px solid #4f6129;
-  
 }
 
 .info-button a::before {
@@ -150,10 +147,8 @@ info-button
   inset: 0;
   overflow: hidden;
   transition: 0.3s ease-out;
-  
-
 }
-.info-button .reead-if{
+.info-button .reead-if {
   text-decoration: none;
   color: #4f6129;
   font-family: "Poppins", sans-serif;
@@ -175,7 +170,6 @@ info-button
 }
 
 .info-button svg {
-  
   transition: 0.2s;
   font-size: 16px;
   position: relative;
@@ -183,7 +177,6 @@ info-button
   transition-delay: 0.2s;
   color: #f4b328;
 }
-
 
 /*donate Button *
 */
@@ -1167,8 +1160,8 @@ Stories section
 #home-who {
   margin-top: 55px;
   width: 100%;
-  height: 75vh;
-  background: url("../img/about-us.png");
+  height: 85vh;
+  background: url("../img/Gallery/about-bg-pic.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; /* Add this to establish a positioning context */
@@ -1333,9 +1326,9 @@ Stories section
   }
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------
 # Features
---------------------------------------------------------------*/
+-----------------------------------------*/
 .features .content {
   margin: 10px;
 }
@@ -1434,9 +1427,7 @@ Stories section
   background: url("../img/reunion/who\ we\ are\ 1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative; /* Add this to establish a positioning context */
-
-  /* Center content vertically and horizontally */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1449,12 +1440,7 @@ Stories section
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.4
-  ); /* Adjust the opacity here (0.5 for 50% opacity) */
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 #leadership .container {
@@ -1510,6 +1496,7 @@ Stories section
 .team .member .pic {
   overflow: hidden;
   border-radius: 3px;
+  max-height: 325px;
 }
 
 .team .member .member-info {
@@ -1725,10 +1712,7 @@ Stories section
   }
 }
 
-
 /*===============END OF CORE COMMITMENTS PAGE===============*/
-
-
 
 /*=============START OF MEDIA========================*/
 
@@ -1843,13 +1827,12 @@ Stories section
   color: #fff;
 }
 
-
 /*============START OF GALLERY======================*/
 #home-gallery {
   margin-top: 55px;
   width: 100%;
-  height: 95vh;
-  background: url("../img/reunion/Galander-bg.jpg");
+  height: 90vh;
+  background: url("../img/Gallery/gallery-bg-main.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; /* Add this to establish a positioning context */
@@ -1901,16 +1884,16 @@ Stories section
 }
 
 /*---------Photos Gallery---------*/
-input{
+input {
   display: none;
 }
-.container-gallery{
+.container-gallery {
   width: 100%;
   text-align: center;
   padding: 60px 0 100px 0;
 }
 
-label{
+label {
   display: inline-block;
   border: 1px solid;
   height: 100%;
@@ -1922,70 +1905,69 @@ label{
   background-color: #4f6129;
   font-size: 18px;
   font-weight: 700;
-  transition:color .5s;
+  transition: color 0.5s;
   padding: 0 20px;
   border-radius: 50px;
   font-family: Playfair Display;
-  transition: ease .5s;
-
+  transition: ease 0.5s;
 }
-label:hover{
+label:hover {
   background-color: #f4b328;
-  
 }
 
-.photo-gallery{
+.photo-gallery {
   width: 100%;
   height: auto;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
-.pic1{
+.pic1 {
   position: relative;
-  height: 330px;
+  height: 350px;
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.06);
 }
-.pic1 img{
+.pic1 img {
   width: 100%;
   height: 100%;
   border-radius: 2px;
+  object-fit: cover;
 }
 
-#check1:checked ~ .container-gallery .photo-gallery .pic1{
+#check1:checked ~ .container-gallery .photo-gallery .pic1 {
   opacity: 1;
   transform: scale(1);
   position: relative;
-  transition: .5s;
+  transition: 0.5s;
 }
-#check2:checked ~ .container-gallery .photo-gallery .fundraiser{
+#check2:checked ~ .container-gallery .photo-gallery .fundraiser {
   transform: scale(1);
   opacity: 1;
   position: relative;
-  transition: .5s;
+  transition: 0.5s;
 }
 #check2:checked ~ .container-gallery .photo-gallery .reunion,
-#check2:checked ~ .container-gallery .photo-gallery .all-photos{
+#check2:checked ~ .container-gallery .photo-gallery .all-photos {
   transform: scale(0);
   opacity: 0;
-  position:absolute;
-  transition: .5s;
+  position: absolute;
+  transition: 0.5s;
 }
 
-#check3:checked ~ .container-gallery .photo-gallery .reunion{
+#check3:checked ~ .container-gallery .photo-gallery .reunion {
   transform: scale(1);
   opacity: 1;
   position: relative;
-  transition: .5s;
+  transition: 0.5s;
 }
 #check3:checked ~ .container-gallery .photo-gallery .fundraiser,
-#check3:checked ~ .container-gallery .photo-gallery .all-photos{
+#check3:checked ~ .container-gallery .photo-gallery .all-photos {
   transform: scale(0);
   opacity: 0;
-  position:absolute;
+  position: absolute;
   transition: 0s;
 }
 /*===============START OF WATCH PAGE===============*/
@@ -2191,7 +2173,7 @@ li.video {
   margin-top: 55px;
   width: 100%;
   height: 85vh;
-  background-color: #888;
+  background-image: url("../img/Gallery/new-bg-new.avif");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative; /* Add this to establish a positioning context */
@@ -2992,9 +2974,7 @@ img {
   }
 }
 
-
 /*--gallery*/
-
 
 /*==================END OF Gallery=====================*/
 
